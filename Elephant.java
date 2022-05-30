@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Elephant here.
@@ -24,6 +24,16 @@ public class Elephant extends Actor
             move(2);
         }
         
-        removeTouching(Apple.class);
+        eat();
     }
+    
+    public void eat()
+        {
+            if(isTouching(Apple.class))
+            {
+                removeTouching(Apple.class);
+                Myworld world = (Myworld) getWorld();
+                world.createApple();
+            }
+        }   
 }
