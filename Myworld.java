@@ -21,10 +21,14 @@ public class Myworld extends World
         Elephant elephant = new Elephant();
         addObject(elephant,300,200);
         
+        createApple();
+    }
+    
+    public void createApple()
+    {
         Apple apple = new Apple();
-        addObject(apple,0,0);
-        
-        
-        
+        int x = Greenfoot.getRandomNumber(600);
+        int y = (0);
+        addObject(apple,x,y);
     }
 }
