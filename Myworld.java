@@ -11,7 +11,7 @@ public class Myworld extends World
 
     public int score; 
     Label scoreLabel;
-    
+    int level = 1;
     /**
      * Constructor for objects of class Myworld.
      * 
@@ -40,6 +40,10 @@ public class Myworld extends World
     {
         score++;
         scoreLabel.setValue(score);
+        if(score % 5 == 0)
+        {
+            level += 1;
+        }
     }
     
     public void createApple()
@@ -47,6 +51,7 @@ public class Myworld extends World
         Apple apple = new Apple();
         int x = Greenfoot.getRandomNumber(600);
         int y = (0);
+        apple.setSpeed(level);
         addObject(apple,x,y);
     }
 }
