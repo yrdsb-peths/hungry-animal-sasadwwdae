@@ -15,7 +15,7 @@ public class Apple extends Actor
     public void act()
     {
         // Add your action code here.
-        setLocation(getX(),getY()+1);
+        setLocation(getX(),getY()+2);
         
         Myworld world = (Myworld) getWorld();
         if(getY() >= world.getHeight())
